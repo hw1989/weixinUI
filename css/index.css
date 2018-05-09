@@ -1,0 +1,24 @@
+
+.userinfo_ele{
+   padding: 0px;
+   width: 300px;
+   line-height: 24px;
+   height: 48px;
+   display: inline-block;
+   position: relative; 
+   border-bottom: 1px solid #00bcd4; 
+}
+.hint{
+    bottom: 12px;
+    color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    bottom: 2px;
+}
+.userinfo{
+    font-size: 16px;
+    background: #00000000;
+    padding: 0;
+    border: none;
+    position: absolute;
+    bottom: 2px;
+}
