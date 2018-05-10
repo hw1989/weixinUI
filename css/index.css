@@ -1,6 +1,16 @@
 
+.container-fluid{
+    width:60%;
+    border-radius: 5px;
+    border: 1px solid #d5dce5;
+    margin-top: 10px;
+    padding: 10px 0px;
+}
 .row{
     margin-top: 8px;
+}
+.container{
+    text-align: center;
 }
 .userinfo_ele{
    /*padding: 0px;*/
@@ -46,29 +56,31 @@
     width: 300px;
 }
 .login{
-    width: 30%;
-    max-width: 100px;
+    width: 200px;
+    /*max-width: 100px;*/
     min-width: 50px;
-    border-radius: 5px;
+    border-radius: 30px;
     background-color: #5cb85c;
     color: white;
     padding: 3px 0px;
     text-align: center;
     border-color: #4cae4c;
-    float: left;
-    margin-left: 25px;
+    /*float: left;*/
+    margin-left: auto;
+    margin-right: auto;
+    /*margin-left: 25px;*/
 }
 .register{
     width: 30%;
     max-width: 100px;
     min-width: 50px;
-    border-radius: 5px;
+    border-radius: 30px;
     background-color: #55aaa0;
     color: white;
     padding: 3px 0px;
     text-align: center;
-    float: left;
-    margin-left: 25px;
+    /*float: left;*/
+    /*margin-left: 25px;*/
 }
 .error-login{
     clear:both;
@@ -81,6 +93,9 @@
     word-break: break-all;
     color: #b74d46;
     display: none;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
 }
 .error-icon{
     display:inline-block;
