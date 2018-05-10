@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrinl-to-fit=no,user-scalable=no">
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <link type="text/css" rel="stylesheet" href="css/index.css" />
     <script type="text/javascript" src="js/verify.js"></script>
 </head>
@@ -12,13 +14,34 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="userinfo_ele">
-                <div class="hint">
-                    账号
+            <div class="col-md-4 col-md-offset-4 container_btn">
+                <div class="userinfo_ele account">
+                    <input class="userinfo account" type="text" placeholder="输入用户名/邮箱/手机号" />
                 </div>
-                <input class="userinfo account" type="text" />
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4 container_btn">
+                <div class="userinfo_ele password">
+                    <input class="userinfo password" type="password" placeholder="输入密码" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4 container_btn">
+                <div class="error-login">
+                    <span class="error-icon" ></span>
+                    <span class="error-message"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4 container_btn">
+                <div class="btn login">登录</div>
+                <div class="btn register">注册</div>
+            </div>
+        </div>
+
     </div>
 </body>
 
