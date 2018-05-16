@@ -1,0 +1,197 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrinl-to-fit=no,user-scalable=no">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+</head>
+<div class="container-fluid">
+    <div class="row top-logo-container">
+        <a class="top-logo" href="#">
+        <img src="img/top-logo.png" rel="">
+        </a>
+    </div>
+    <div class="row carousel slide" id="mybanner">
+        <ol class="carousel-indicators" data-slide-to="0" class="active">
+            <li data-target="#mybanner" data-slide-to="0"></li>
+            <li data-target="#mybanner" data-slide-to="1"></li>
+            <li data-target="#mybanner" data-slide-to="2"></li>
+            <li data-target="#mybanner" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active">
+                <a href="#"><img src="img/01.png" /></a>
+            </div>
+            <div class="item">
+                <a href="#"><img src="img/02.png" /></a>
+            </div>
+            <div class="item">
+                <a href="#"><img src="img/03.png" /></a>
+            </div>
+            <div class="item">
+                <a href="#"><img src="img/04.png" /></a>
+            </div>
+        </div>
+        <a href="#mybanner" data-slide="prev" class="carousel-control left">&lsaquo;</a>
+        <a href="#mybanner" data-slide="next" class="carousel-control right">&rsaquo;</a>
+    </div>
+    <div class="row">
+        <div class="project-top">
+            <div class="project-head">
+                <span class="project-title">产品展示</span> /product
+                <span class="project-more">更多</span>
+            </div>
+        </div>
+    </div>
+    <div class="row product-list">
+        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+            <a href="#">
+                <div class="thumbnail">
+                    <img src="img/060147449b.gif" />
+                    <div class="caption">
+                        <p>指纹锁 全自动Q6H</p>
+                    </div>
+                </div>
+
+            </a>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+            <a href="#">
+                <div class="thumbnail">
+                    <img src="img/060147449b.gif" />
+                    <div class="caption">
+                        <p>指纹锁 全自动Q6H</p>
+                    </div>
+                </div>
+
+            </a>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+            <a href="#">
+                <div class="thumbnail">
+                    <img src="img/060147449b.gif" />
+                    <div class="caption">
+                        <p>指纹锁 全自动Q6H</p>
+                    </div>
+                </div>
+
+            </a>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+            <a href="#">
+                <div class="thumbnail">
+                    <img src="img/060147449b.gif" />
+                    <div class="caption">
+                        <p>指纹锁 全自动Q6H</p>
+                    </div>
+                </div>
+
+            </a>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+            <a href="#">
+                <div class="thumbnail">
+                    <img src="img/060147449b.gif" />
+                    <div class="caption">
+                        <p>指纹锁 全自动Q6H</p>
+                    </div>
+                </div>
+
+            </a>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+            <a href="#">
+                <div class="thumbnail">
+                    <img src="img/060147449b.gif" />
+                    <div class="caption">
+                        <p>指纹锁 全自动Q6H</p>
+                    </div>
+                </div>
+
+            </a>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+            <a href="#">
+                <div class="thumbnail">
+                    <img src="img/060147449b.gif" />
+                    <div class="caption">
+                        <p>指纹锁 全自动Q6H</p>
+                    </div>
+                </div>
+
+            </a>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+            <a href="#">
+                <div class="thumbnail">
+                    <img src="img/060147449b.gif" />
+                    <div class="caption">
+                        <p>指纹锁 全自动Q6H</p>
+                    </div>
+                </div>
+
+            </a>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <div class="row">
+        <div class="connectus-top">
+            <div class="connectus-head">
+                <span class="connectus-title">联系我们</span>
+            </div>
+        </div>
+        <div class="connectus-content">
+                <img class="connectus-icon" src="img/phone.png">
+                <span class="connectus-text"><span>电话：0755-26606582</span></span>
+        </div>
+        <div class="connectus-content">
+                <img class="connectus-icon" src="img/map.png">
+                <span class="connectus-text">地址：<span>深圳市南山区科技园北区朗山二路齐民道庆邦电子4楼403</span></span>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+
+        //轮播自动播放
+        $('#mybanner').carousel({
+            //自动4秒播放
+            interval: 3500,
+        });
+
+        //设置垂直居中
+        $('.carousel-control').css('line-height', $('.carousel-inner img').height() + 'px');
+        $(window).resize(function () {
+            var $height = $('.carousel-inner img').eq(0).height() ||
+                $('.carousel-inner img').eq(1).height() ||
+                $('.carousel-inner img').eq(2).height();
+            $('.carousel-control').css('line-height', $height + 'px');
+        });
+
+    });
+
+</script>
+
+</html>

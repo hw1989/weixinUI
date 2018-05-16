@@ -1,0 +1,67 @@
+@charset "utf-8";
+.row{
+    padding: 0px;
+}
+.carousel-inner img {
+	margin: 0 auto;
+}
+.carousel-control {
+	font-size: 100px;
+}
+.project-top,.connectus-top{
+    border-bottom:1px #999 solid;
+    /*width: 100%;*/
+    padding-bottom: 5px;
+    padding-top: 22px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.project-head,.connectus-head{
+    font-size: 16px;
+    line-height: 18px;
+    color: #666;
+}
+.project-head .project-title,.connectus-head .connectus-title{
+    font-size: 18px;
+    line-height: 18px;
+    color: #b50917;
+    width: 80px;
+    border-bottom:2px #b50917 solid;
+    padding-bottom: 4px;
+}
+.project-more{
+    float: right;
+}
+.product-list{
+    margin: 8px 0px;
+}
+.caption{
+    text-align: center;
+}
+.top-logo-container{
+    height: 80px;
+}
+.top-logo{
+    margin:25px 30px 25px 40px;
+    width: 121px;
+    display: inline-block;
+}
+.carousel-control{
+    display: none;
+}
+.connectus-icon{
+    height: 35px;
+    width: 35px;
+}
+.connectus-content{
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.connectus-text{
+    font-size: 16px;
+}
+.connectus-icon{
+    float: left;
+}
