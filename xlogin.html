@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/xlogin.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="login-logo">
+                <a class="top-logo" href="#">
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="error_message hidden">
+                
+            </div>
+            <form type="post">
+                <input class="user-name input" type="text" placeholder="用户账号">
+                <hr class="hr15">
+                <input class="user-psw input" type="password" placeholder="用户密码">
+                <hr class="hr15">请输入验证码：
+                <div >
+                    <img class="img-verify" src="img/code.png">
+                    <input class="user-verify  input" type="text">
+                </div>
+                <div style="clear: both"></div>
+                <hr class="hr15">
+                <input class="user-button" type="submit" value="登录">
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $('.input').focus(function () {
+                $(this).addClass('ele_focus');
+            });
+            $('.input').blur(function () {
+                $(this).removeClass('ele_focus');
+            });
+            $('.user-button').bind('click', function () {
+                var status = 0;
+                var account = $(".user-name").val();
+                var psw = $(".user-psw").val();
+                var verify = $(".user-verify").val();
+                if ($.trim(account) == '' && status == 0) {
+                    status = 1;
+                    $(".user-name").addClass('ele_error');
+                } else {
+                    $(".user-name").removeClass('ele_error');
+                }
+                if ($.trim(psw) == '' && status == 0) {
+                    status = 2;
+                    $(".user-psw").addClass('ele_error');
+                } else {
+                    $(".user-psw").removeClass('ele_error');
+                }
+                if ($.trim(verify) == '' && status == 0) {
+                    status = 3;
+                    $(".user-verify").addClass('ele_error');
+                } else {
+                    $(".user-verify").removeClass('ele_error');
+                }
+                switch (status) {
+                    case 0:
+                        if (!$('.error_message').hasClass('hidden')) {
+                            $('.error_message').addClass('hidden');
+                        }
+                        break;
+                    case 1:
+                    $('.error_message').html('无效的账号！');
+                        $('.error_message').removeClass('hidden');
+                        break;
+                    case 2:
+                    $('.error_message').html('无效的密码！');
+                        $('.error_message').removeClass('hidden');
+                        break;
+                    case 3:
+                    $('.error_message').html('无效的验证码！');
+                        $('.error_message').removeClass('hidden');
+                        break;
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

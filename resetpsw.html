@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/resetpsw.css" />
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="login-logo">
+                <a class="top-logo" href="#">
+                                </a>
+            </div>
+        </div>
+        <div class="row">
+            <form type="post">
+                <div>设置新的密码</div>
+                <hr class="hr15">
+                <input class="user-psw input" type="text" placeholder="新密码">
+                <hr class="hr15">
+                <input class="user-repsw input" type="password" placeholder="确认密码">
+                <hr class="hr15">请输入验证码：
+                <div>
+                    <img class="img-verify" src="img/code.png">
+                    <input class="user-verify  input" type="text">
+                </div>
+                <div style="clear: both"></div>
+                <hr class="hr15">
+                <input class="user-button" type="submit" value="确定">
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $('.input').focus(function () {
+                $(this).addClass('ele_focus');
+            });
+            $('.input').blur(function () {
+                $(this).removeClass('ele_focus');
+            });
+        });
+    </script>
+</body>
+
+</html>
