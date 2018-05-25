@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/personalinfo.css" />
+    <link type="text/css" rel="stylesheet" href="css/loadmore.css" />
+    <title>个人信息</title>
+</head>
+
+<body>
+    <form>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 personal-info">
+                    <br class="br15">
+                    <input class="user-name input" type="text" placeholder="姓名">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 personal-info">
+                    <br class="br15">
+                    <input class="user-phone input" type="text" placeholder="电话">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 personal-info">
+                    <br class="br15">
+                    <input class="user-address input" type="text" placeholder="地址">
+                </div>
+            </div>
+
+            <div class="row  hidden">
+                <div class="col-md-4 col-md-offset-4 personal-info">
+                    <br class="br15">
+                    <div class="error_message ">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 personal-info">
+                    <br class="br15">
+                    <input class="user-button" type="submit" value="确定">
+                </div>
+            </div>
+
+            <div class="row mask hidden">
+                <div class="col-xs-12 ">
+                    <div class="loading-anim">
+                        <div class="load-anim">
+                            <div class="loadmore">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="loadmore-text"><span>正在绑定...</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </form>
+    <script>
+        $(function () {
+            $('.user-button').bind('click',function () {
+                $.ajax({
+                    type: 'get',
+                    url: 'http://www.baidu.com',
+                    beforeSend: function () {
+                        //设置显示动画
+                        if ($('.mask').hasClass('hidden')) {
+                            $('.mask').removeClass('hidden');
+                        }
+                    },
+                    complete: function () {
+                        if (!$('.mask').hasClass('hidden')) {
+                            $('.mask').addClass('hidden');
+                        }
+                    }
+                });
+            });
+
+        });
+    </script>
+</body>
+
+</html>

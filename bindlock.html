@@ -1,0 +1,153 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/bindlock.css" />
+    <link type="text/css" rel="stylesheet" href="css/loadmore.css" />
+    <title>绑定智能锁</title>
+</head>
+
+<body>
+    <form>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="login-logo">
+                    <a class="top-logo" href="#">
+                                                    </a>
+                </div>
+            </div>
+
+            <div class="row lock-info">
+                <div class="col-md-4 col-md-offset-4 ">
+                    <input class="lock-name input" type="text" placeholder="锁名称">
+                    <hr class="hr15">
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 lock-info">
+                    <input class="lock-code input" type="text" placeholder="锁序列号">
+                    <hr class="hr15">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class=" col-md-4 col-md-offset-4  lock-info lock-info-error hidden">
+                    <div class="error_message ">
+
+                    </div>
+                    <hr class="hr15">
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 lock-info">
+                    <input class="lock-button" type="submit" value="绑定">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 mask hidden">
+                    <div class="loading-anim">
+                        <div class="load-anim">
+                            <div class="loadmore">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="loadmore-text"><span>正在绑定...</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </form>
+    <script type="text/javascript">
+        $(function () {
+            $('.input').focus(function () {
+                $(this).addClass('ele_focus');
+            });
+            $('.input').blur(function () {
+                $(this).removeClass('ele_focus');
+            });
+            $('.lock-button').bind('click', function () {
+                var status = 0;
+                var name = $('.lock-name').val();
+                var code = $('.lock-code').val();
+
+                if ($.trim(name) == '' && status == 0) {
+                    status = 1;
+                    $(".lock-name").addClass('ele_error');
+                } else {
+                    $(".lock-name").removeClass('ele_error');
+                }
+                if ($.trim(code) == '' && status == 0) {
+                    status = 2;
+                    $(".lock-code").addClass('ele_error');
+                } else {
+                    $(".lock-code").removeClass('ele_error');
+                }
+                console.log(status);
+                switch (status) {
+                    case 0:
+                        // $(".lock-name").removeClass('ele_error');
+                        // $(".lock-code").removeClass('ele_error');
+                        if (!$('.lock-info-error').hasClass('hidden')) {
+                            $('.lock-info-error').addClass('hidden');
+                        }
+
+                        // $('body').oneTime('1hs', 'D', function () {
+
+                        // });
+
+                        $.ajax({
+                            type: 'Get',
+                            url: 'http://www.baidu.com',
+                            cache: false,
+                            beforeSend: function () {
+                                //设置显示动画
+                                if ($('.mask').hasClass('hidden')) {
+                                    $('.mask').removeClass('hidden');
+                                }
+                            },
+                            complete: function () {
+                                if (!$('.mask').hasClass('hidden')) {
+                                    $('.mask').addClass('hidden');
+                                }
+                            }
+                        });
+                        break;
+                    case 1:
+                        // $(".lock-name").addClass('ele_error');
+                        // $(".lock-code").removeClass('ele_error');
+                        if ($('.lock-info-error').hasClass('hidden')) {
+                            $('.lock-info-error').removeClass('hidden');
+                        }
+                        $('.error_message').html('无效的锁名！');
+                        break;
+                    case 2:
+                        // $(".lock-name").removeClass('ele_error');
+                        // $(".lock-code").addClass('ele_error');
+                        $('.error_message').html('无效的列号！');
+                        if ($('.lock-info-error').hasClass('hidden')) {
+                            $('.lock-info-error').removeClass('hidden');
+                        }
+                        break;
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

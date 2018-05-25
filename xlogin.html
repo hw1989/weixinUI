@@ -19,14 +19,14 @@
         </div>
         <div class="row">
             <div class="error_message hidden">
-                
+
             </div>
             <form type="post">
                 <input class="user-name input" type="text" placeholder="用户账号">
                 <hr class="hr15">
                 <input class="user-psw input" type="password" placeholder="用户密码">
                 <hr class="hr15">请输入验证码：
-                <div >
+                <div>
                     <img class="img-verify" src="img/code.png">
                     <input class="user-verify  input" type="text">
                 </div>
@@ -74,15 +74,15 @@
                         }
                         break;
                     case 1:
-                    $('.error_message').html('无效的账号！');
+                        $('.error_message').html('无效的账号！');
                         $('.error_message').removeClass('hidden');
                         break;
                     case 2:
-                    $('.error_message').html('无效的密码！');
+                        $('.error_message').html('无效的密码！');
                         $('.error_message').removeClass('hidden');
                         break;
                     case 3:
-                    $('.error_message').html('无效的验证码！');
+                        $('.error_message').html('无效的验证码！');
                         $('.error_message').removeClass('hidden');
                         break;
                 }
