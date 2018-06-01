@@ -1,0 +1,84 @@
+body{
+    /*background: linear-gradient(0deg, #0b4182 1%, #1e88e5 100%);*/
+    padding:0px 10px;
+    font-size: 15px;
+    color: #616366;
+    background-color: #f3f3f3;
+    overflow-x:visible;
+}
+div{
+    display: block;
+}
+.hr15{
+    height: 15px;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+.hr10{
+    /*height: 10px;*/
+    border-top: 1px solid #DCDEE0;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.top-logo{
+    /*margin:15px 20px 15px 20px;*/
+    width: 121px;
+    display: inline-block;
+}
+.logo-icon{
+    width: 60px;
+    height: 60px;
+}
+.row{
+    /*background: linear-gradient(0deg, #0b4182 1%, #1e88e5 100%);*/
+    /*background-color: #1E87E5;*/
+    background-color: #ffffff;
+    margin-top: 10px;
+    /*color: white;*/
+    
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid #DCDEE0;
+}
+.lock-name{
+    font-size: 20px;
+    text-align: center;
+    color: #555555;
+}
+.lock-lock{
+    
+    
+    
+    /*width: 120px;*/
+}
+.lock-info{
+    margin-top: 5px;
+    border-radius: 5px;
+}
+.lock-info-icon{
+    width: 60px;
+    height: 60px;
+    /*background-color: #1e88e5;*/
+    border-radius: 5px;
+}
+.lock-electricity-process{
+    /*background-color:red;*/
+    height:15px;
+    width:16px;
+    display:inline-block;
+    /*left:-53px;
+    bottom:-4px;
+    position: relative;*/
+
+    left: 25px;
+    bottom: 94px;
+    position: absolute;
+    /*left: 24px;
+    top: 12px;*/
+}

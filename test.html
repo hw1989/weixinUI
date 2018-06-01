@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <div class="lock-power">
+        <canvas id="lock-power-my" width="100" height="100">
+        </canvas>
+    </div>
+</body>
+<script type="text/javascript">
+    $(function(){
+        var canvas=document.getElementById("lock-power-my");
+        var context=canvas.getContext("2d");
+        var wid=50;
+        var hei=20;
+        var x=10;
+        var y=10;
+        var riu=6;
+        var linew=1;
+        context.strokeStyle ="#FF5D43";
+        context.lineWidth = linew;
+        context.beginPath();
+        context.moveTo(x+riu,y);
+        context.quadraticCurveTo(x,y,x,y+riu);
+        context.lineTo(x,y+hei-riu);
+        context.quadraticCurveTo(x,y+hei,x+riu,y+hei);
+        context.lineTo(x+wid-riu,y+hei);
+        context.quadraticCurveTo(x+wid,y+hei,x+wid,y+hei-riu);
+        context.lineTo(x+wid,y+riu);
+        context.quadraticCurveTo(x+wid,y,x+wid-riu,y);
+        context.lineTo(x+riu,y);
+        context.stroke();
+        //显示
+        var mar=4;
+        var headwid=12;
+        context.strokeStyle ="#FF5D43";
+        context.lineWidth = linew;
+        context.beginPath();
+        context.moveTo(x+wid+mar,y+(hei-headwid)/2);
+        context.quadraticCurveTo(x+wid+mar+10,y+hei/2,x+wid+mar,y+(hei+headwid)/2);
+        // context.lineTo(x+wid+mar,y+(hei+headwid)/2);
+        context.lineTo(x+wid+mar,y+(hei-headwid)/2);
+        context.stroke();
+    });
+</script>
+
+</html>

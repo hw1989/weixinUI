@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <title>查看锁状态
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/lockstatus.css" />
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="top-logo-container">
+            <a class="top-logo" href="#">
+                        <img src="img/bxlogo-1.png" class="logo-icon" rel=""/>
+                    </a>
+        </div>
+        <div class="row border">
+            <div class=" col-xs-12 lock-name">
+                锁名
+            </div>
+            <div class=" col-xs-12  lock-lock ">
+                <div class="lock-info bg-info">
+                    <img src="img/2.png" class="lock-info-icon lock-icon-lock">
+                    <span>状态：<span class="lock-info-switch">开-On</span></span>
+                </div>
+                <div class="hr10 top-border"></div>
+                <div class="lock-info bg-info">
+                    <div style="display:inline-block;">
+                        <img src="img/3.png" class="lock-info-icon">
+                        <span class="lock-electricity-process"></span>
+                    </div>
+                    <span>电量：<span class="lock-info-percent">50%</span></span>
+                </div>
+                <div class="hr10 top-border"></div>
+                <div class=" lock-info bg-info">
+                    <img src="img/4.png" class="lock-info-icon lock-icon-net">
+                    <span>网络：<span class="lock-info-net">正常</span></span>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            var num = Math.random() * 10;
+            var json = "";
+            if (Math.floor(num) % 2 == 0) {
+                json = '{statu:1,power:100,net:1}';
+            } else {
+                json = '{statu:-1,power:100,net:0}';
+            }
+            var obj = eval('(' + json + ')');
+            // var obj1 = jQuery.parseJSON(obj);
+            //电量
+            var percent = Math.random();
+            var ram = 32 * percent;
+            console.log(ram);
+            if (percent > 0.6) {
+                //76.217.100
+                $('.lock-electricity-process').css('background-color', "#4CD964");
+            } else if (percent > 0.3 && percent < 0.6) {
+                $('.lock-electricity-process').css('background-color', "#3dc1ff");
+            } else {
+                //234.37.44
+                $('.lock-electricity-process').css('background-color', "#EA222c");
+            }
+            $('.lock-electricity-process').css('width', ram + "px");
+            console.log(Math.floor(ram));
+            $('.lock-info-percent').html(Math.floor(percent*100)+'%');
+            if (obj.statu == -1) {
+                $('.lock-info-net').html('异常');
+                $('.lock-icon-net').attr('src','img/5.png');
+                $('.lock-icon-lock').attr('src','img/2.png');
+            } else {
+                $('.lock-icon-lock').attr('src','img/1.png');
+                $('.lock-info-net').html('正常');
+                $('.lock-icon-net').attr('src','img/4.png');
+                if (obj.net % 2 == 1) {
+                    $('.lock-info-switch').html('开-On');
+                } else {
+                    $('.lock-info-switch').html('关-Off');
+                }
+            }
+
+        });
+    </script>
+</body>
+
+</html>
